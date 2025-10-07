@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Mahasiswa</title>
+</head>
+<body>
+  <h2>Form Data Mahasiswa</h2>
+
+  <form id="myForm">
+    <label>Nama:</label><br>
+    <input type="text" id="nama" required><br><br>
+
+    <label>NIM:</label><br>
+    <input type="text" id="nim" required><br><br>
+
+    <label>Jenis Kelamin:</label><br>
+    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+    <input type="radio" name="jk" value="Perempuan"> Perempuan<br><br>
+
+    <label>Jurusan:</label><br>
+    <select id="jurusan">
+      <option value="Teknik Informatika">Teknik Informatika</option>
+      <option value="Sistem Informasi">Sistem Informasi</option>
+      <option value="Teknik Komputer">Teknik Komputer</option>
+      <option value="Manajemen Informatika">Manajemen Informatika</option>
+    </select><br><br>
+
+    <label>Hobi (boleh pilih lebih dari satu):</label><br>
+    <select id="hobi" multiple size="4">
+      <option value="Membaca">Membaca</option>
+      <option value="Menulis">Menulis</option>
+      <option value="Olahraga">Olahraga</option>
+      <option value="Musik">Musik</option>
+    </select><br><br>
+
+    <label>Komentar:</label><br>
+    <textarea id="komentar" rows="3" cols="30" placeholder="Tulis komentar..."></textarea><br><br>
+
+    <input type="submit" value="Kirim">
+  </form>
+
+  <hr>
+  <h3>Hasil Input:</h3>
+  <div id="output"></div>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const nim = document.getElementById("nim").value;
+      const jk = document.querySelector('input[name="jk"]:checked')?.value || "-";
+      const jurusan = document.getElementById("jurusan").value;
+      const hobi = Array.from(document.getElementById("hobi").selectedOptions).map(opt => opt.value);
+      const komentar = document.getElementById("komentar").value;
+
+      document.getElementById("output").innerHTML = `
+        <p><b>Nama:</b> ${nama}</p>
+        <p><b>NIM:</b> ${nim}</p>
+        <p><b>Jenis Kelamin:</b> ${jk}</p>
+        <p><b>Jurusan:</b> ${jurusan}</p>
+        <p><b>Hobi:</b> ${hobi.join(", ")}</p>
+        <p><b>Komentar:</b> ${komentar}</p>
+      `;
+    });
+  </script>
+</body>
+</html>
+
