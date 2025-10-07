@@ -1,7 +1,6 @@
-<img width="1845" height="508" alt="Screenshot 2025-10-07 133552" src="https://github.com/user-attachments/assets/bbb23d3d-ee36-461a-9992-e4be57015fc4" /># Lab3Web
+# Lab3Web
 <img width="1854" height="644" alt="Screenshot 2025-10-07 133543" src="https://github.com/user-attachments/assets/8dcc9a73-26cc-4930-97e8-586a93f027fe" />
 <img width="1845" height="508" alt="Screenshot 2025-10-07 133552" src="https://github.com/user-attachments/assets/38328439-8ede-4b33-bb24-23eeedd6368a" />
-
 <img width="889" height="378" alt="Screenshot 2025-10-07 122038" src="https://github.com/user-attachments/assets/0a5c8026-ebef-4daa-8798-7cac4392e2d7" />
 <img width="890" height="379" alt="Screenshot 2025-10-07 120820" src="https://github.com/user-attachments/assets/fc5f7094-96cf-48aa-9708-03440d651a07" />
 
